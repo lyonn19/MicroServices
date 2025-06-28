@@ -1,0 +1,19 @@
+﻿services:
+  webapplication1:
+    image: webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+
+  courier:
+    image: courier
+    build:
+      context: .
+      dockerfile: Courier/Dockerfile
+
+  shared:
+    image: shared
+    build:
+      context: .
+      dockerfile: Shared/Dockerfile
+
