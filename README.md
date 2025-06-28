@@ -25,11 +25,21 @@ This project demonstrates the implementation of a microservices architecture. Ea
 - Isolated codebases for each service
 - Easy local development and deployment (Docker-compatible)
 - Environment variable configuration
+- GraphQL
+- GRPC
+- RabbitMQ
+- DDD
+- Entity Framework and Dapper
+- Differents Patterns GoF
+- Unit Tests
+- Integration Tests Container
+- Front End React/Angular
+- etc 
 
 ## Tech Stack
 
-- Language(s): _[Add your main languages, e.g., Node.js, Python, C#]_
-- Framework(s): _[Express, FastAPI, .NET, etc.]_
+- Language(s): _C#_
+- Framework(s): _.NET_
 - Docker for containerization
 - API-driven communication
 
