@@ -10,7 +10,6 @@ namespace Courier.Application.Common.Interfaces
     public interface IApplicationDbContext
     {
         DbSet<Parcel> Parcels { get; set; }
-        DbSet<DomainEvent> DomainEvents { get; set; }
         
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }

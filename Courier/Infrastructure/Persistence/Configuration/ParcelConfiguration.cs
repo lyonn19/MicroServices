@@ -20,30 +20,29 @@ public class ParcelConfiguration : IEntityTypeConfiguration<Parcel>
             // Owned Entity: Sender Address
             builder.OwnsOne(p => p.Sender, a =>
             {
-/*
                 a.Property(p => p.Street).HasColumnName("SenderStreet").HasMaxLength(200);
                 a.Property(p => p.City).HasColumnName("SenderCity").HasMaxLength(100);
                 a.Property(p => p.State).HasColumnName("SenderState").HasMaxLength(100);
                 a.Property(p => p.Country).HasColumnName("SenderCountry").HasMaxLength(100);
-                a.Property(p => p.ZipCode).HasColumnName("SenderZipCode").HasMaxLength(20); */
+                a.Property(p => p.ZipCode).HasColumnName("SenderZipCode").HasMaxLength(20);
             });
 
             // Owned Entity: Recipient Address
             builder.OwnsOne(p => p.Recipient, a =>
             {
-                /*a.Property(p => p.Street).HasColumnName("RecipientStreet").HasMaxLength(200);
+                a.Property(p => p.Street).HasColumnName("RecipientStreet").HasMaxLength(200);
                 a.Property(p => p.City).HasColumnName("RecipientCity").HasMaxLength(100);
                 a.Property(p => p.State).HasColumnName("RecipientState").HasMaxLength(100);
                 a.Property(p => p.Country).HasColumnName("RecipientCountry").HasMaxLength(100);
-                a.Property(p => p.ZipCode).HasColumnName("RecipientZipCode").HasMaxLength(20);*/
+                a.Property(p => p.ZipCode).HasColumnName("RecipientZipCode").HasMaxLength(20);
             });
 
             // Owned Entity: Dimensions
             builder.OwnsOne(p => p.Dimensions, d =>
             {
-                /*d.Property(p => p.Length).HasColumnName("Length").HasColumnType("decimal(18,2)");
+                d.Property(p => p.Length).HasColumnName("Length").HasColumnType("decimal(18,2)");
                 d.Property(p => p.Width).HasColumnName("Width").HasColumnType("decimal(18,2)");
-                d.Property(p => p.Height).HasColumnName("Height").HasColumnType("decimal(18,2)");*/
+                d.Property(p => p.Height).HasColumnName("Height").HasColumnType("decimal(18,2)");
             });
 
             builder.Property(p => p.Weight)

@@ -1,3 +1,4 @@
+using Courier.Infrastructure.Persistence;
 using Courier.Infrastructure.Persistence.Configuration;
 using EventBus.Abstractions;
 using EventBus.Events;

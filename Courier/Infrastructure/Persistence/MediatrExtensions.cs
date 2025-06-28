@@ -1,4 +1,5 @@
 using Courier.Domain.SeedWork;
+using Courier.Infrastructure.Persistence;
 using Courier.Infrastructure.Persistence.Configuration;
 using MediatR;
 

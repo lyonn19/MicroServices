@@ -1,7 +1,5 @@
 using Courier.Application.Common.Interfaces;
-using Courier.Domain;
 using Courier.Domain.ParcelAggregate;
-using GreenDonut;
 using MediatR;
 
 namespace Courier.Application.Commands;
@@ -23,15 +21,11 @@ public class CreateParcelCommandHandler : IRequestHandler<CreateParcelCommand, i
     {
         try
         {
-            /*
-            var parcel = Parcel.Create(
-                request.TrackingNumber,
-                //request.Sender.ToAddress(),
-                //request.Recipient.ToAddress(),
-                //request.Dimensions.ToDimensions(),
-                request.Weight);*/
+            var sender = new Address(request.Sender.Street, request.Sender.City, request.Sender.State, request.Sender.ZipCode, request.Sender.Country);
+            var recipient = new Address(request.Recipient.Street, request.Recipient.City, request.Recipient.State, request.Recipient.ZipCode, request.Recipient.Country);
+            var dimensions = new Dimensions(request.Dimensions.Height, request.Dimensions.Width, request.Dimensions.Length);
             
-            var parcel = Parcel.Create(request.TrackingNumber, new Address(), new Address(), new Dimensions(), request.Weight);
+            var parcel = Parcel.Create(request.TrackingNumber, sender, recipient, dimensions, request.Weight);
 
             await _context.Parcels.AddAsync(parcel, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);

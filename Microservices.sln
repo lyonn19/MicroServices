@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "EventBu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationEventLogEF", "IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{4E9E78C4-A8FE-4FE6-8183-0657D54E4C89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackParcel", "TrackParcel\TrackParcel.csproj", "{BFE5D5BA-B81A-4B13-89E6-EF10B43F6A08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{4E9E78C4-A8FE-4FE6-8183-0657D54E4C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E9E78C4-A8FE-4FE6-8183-0657D54E4C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E9E78C4-A8FE-4FE6-8183-0657D54E4C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE5D5BA-B81A-4B13-89E6-EF10B43F6A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE5D5BA-B81A-4B13-89E6-EF10B43F6A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE5D5BA-B81A-4B13-89E6-EF10B43F6A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE5D5BA-B81A-4B13-89E6-EF10B43F6A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1447F2C3-A08C-47BD-9846-413AF81E0A1C} = {0C11A441-0AE1-4582-B8A5-D68B9A4AD469}

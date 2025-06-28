@@ -1,16 +1,18 @@
 using System.Data;
 using Courier.Application.Common.Interfaces;
+using Courier.Domain.Common;
 using Courier.Domain.ParcelAggregate;
+using Courier.Infrastructure.Persistence.Configuration;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Courier.Infrastructure.Persistence.Configuration;
+namespace Courier.Infrastructure.Persistence;
 
-public class ApplicationDbContext : DbContext, IUnitOfWork
+public class ApplicationDbContext : DbContext, IUnitOfWork, IApplicationDbContext
 {
     public DbSet<Parcel> Parcels { get; set; }
-    
+
     private readonly IMediator _mediator;
     private IDbContextTransaction _currentTransaction;
 
@@ -31,7 +33,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasDefaultSchema("ordering");
-       
+        modelBuilder.ApplyConfiguration(new ParcelConfiguration());
         //modelBuilder.UseIntegrationEventLogs();
     }
 

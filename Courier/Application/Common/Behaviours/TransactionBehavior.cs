@@ -1,4 +1,5 @@
 using Courier.Application.IntegrationEvents;
+using Courier.Infrastructure.Persistence;
 using Courier.Infrastructure.Persistence.Configuration;
 using EventBus.Extensions;
 using MediatR;

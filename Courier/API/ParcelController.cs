@@ -23,7 +23,7 @@ public class ParcelsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetParcel(Guid id)
+    public async Task<IActionResult> GetParcel(int id)
     {
         // Implementation to get parcel details
         return Ok();
